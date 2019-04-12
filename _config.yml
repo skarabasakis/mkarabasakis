@@ -1,0 +1,10 @@
+# Site settings
+title: Manolis Karabasakis - Mining Engineer
+url: "http://manolis.karabasakis.net"
+email: manolis@karabasakis.net
+baseurl: "/"
+social:
+  linkedin: https://www.linkedin.com/in/mkarabasakis
+
+# jekyll
+markdown: kramdown
