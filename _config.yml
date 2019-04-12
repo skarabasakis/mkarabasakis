@@ -8,3 +8,5 @@ social:
 
 # jekyll
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
