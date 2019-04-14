@@ -180,7 +180,7 @@ $Footer-gap: unitSize(2);
   }
 
   .Title {
-    @include responsive-font(8vw, 42px, 75px, 50px);
+    @include responsive-font(6vw, 36px, 54px, 42px);
     font-family: Lato, 'Open Sans', Helvetica, Arial;
     font-weight: 900;
     line-height: 1.1;
@@ -189,7 +189,7 @@ $Footer-gap: unitSize(2);
     text-transform: uppercase;
     display: inline-block;
     &-sub {
-      font-size: 0.34em;
+      font-size: 0.45em;
       letter-spacing: 0.16em;
       font-weight: 400;
       text-transform: none;
@@ -237,11 +237,9 @@ $Footer-gap: unitSize(2);
     @include media-breakpoint-up(sm) {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-      &-col {
-        &:last-child:not(:first-child) {
-          text-align: right;
-        }
+
+      &-col:not(:first-child) {
+        margin-right: unitSize(4);
       }
     }
   }
@@ -436,6 +434,7 @@ $Footer-gap: unitSize(2);
   }
 
   .Navbar,
+  .u-hidden,
   .u-hidden\@print {
     display: none;
   }

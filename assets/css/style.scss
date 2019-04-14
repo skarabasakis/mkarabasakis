@@ -2,3 +2,17 @@
 ---
 
 @import "jekyll-theme-strieder";
+
+.l-Header {
+  flex-direction: row-reverse;
+}
+
+.l-CvImageWrapper {
+
+  max-width: 240px;
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
