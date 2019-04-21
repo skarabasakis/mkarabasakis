@@ -420,10 +420,10 @@ $Footer-gap: unitSize(2);
 
 
 table {
-  margin: 1em 0 0 auto;
+  margin: 1em 0 0 0;
 
   th {
-    text-align: right;
+    text-align: left;
   }
 
   th, td {
@@ -471,6 +471,7 @@ table {
   .l-Footer,
   .l-Section {
     margin-top: unitSize(4);
+    page-break-inside: avoid;
   }
 
   h3, .h3,
@@ -489,7 +490,7 @@ table {
     align-items: flex-end;
     &-col {
       &:last-child:not(:first-child) {
-        text-align: right;
+        // text-align: right;
       }
     }
   }
@@ -509,10 +510,13 @@ table {
   // }
 
   .Tag {
-    font-weight: 900;
+    font-weight: 400;
     display: inline;
     padding-left: 0;
     padding-right: 0;
+    &:not(:last-child)::after {
+      content: ", ";
+    }
   }
 
   *,
@@ -554,3 +558,12 @@ table {
 }
 
 @page { margin: 2.2cm 2.2cm 1.8cm; }
+
+@media print {
+  a.printable[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr.printable[title]:after {
+    content: " (" attr(title) ")";
+  }
+}
